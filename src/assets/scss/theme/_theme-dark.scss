@@ -225,8 +225,6 @@ body {
       &.dark {
         background-color: $light-color;
         nav {
-          img {
-          }
           ul {
             li {
               & > a {
@@ -1220,6 +1218,7 @@ body {
               .price {
                 .large {
                   background: -webkit-linear-gradient($white-5, $white-5);
+                  background-clip: text;
                   -webkit-background-clip: text;
                   -webkit-text-fill-color: transparent;
                 }
@@ -1459,9 +1458,6 @@ body {
     .about-page {
       &.testimonial {
         background-color: $dark-color;
-        img {
-          // filter:brightness(0) invert(1);
-        }
       }
     }
     .faq {

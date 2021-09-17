@@ -123,6 +123,7 @@ html {
       text-transform: capitalize;
       background: -webkit-gradient(linear, left right, left right, from($light), to($dark));
       background: linear-gradient(to right, $dark 25%, $light 65%);
+      background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       letter-spacing: 1px;
@@ -1185,6 +1186,7 @@ html {
       h1 {
         text-transform: capitalize;
         background: linear-gradient(to right, $dark 25%, $light 60%);
+        background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-weight: 800;

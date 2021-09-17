@@ -745,8 +745,6 @@ section {
     }
   }
   &.title2 {
-    .sub-title {
-    }
     h6 {
       &.main-text {
         text-transform: capitalize;
@@ -786,8 +784,6 @@ section {
     .main-title {
       margin-bottom: 30px;
       font-weight: 700;
-      h2 {
-      }
       span {
         color: $primary;
       }
@@ -1459,6 +1455,7 @@ section {
               font-size: 42px;
               font-weight: 600;
               background: -webkit-linear-gradient($light, $dark);
+              background-clip: text;
               -webkit-background-clip: text;
               -webkit-text-fill-color: transparent;
             }
@@ -2604,6 +2601,14 @@ header {
           background-position: -4000px 0;
         }
       }
+      @keyframes slide {
+        from {
+          background-position: 0 0;
+        }
+        to {
+          background-position: -4000px 0;
+        }
+      }
       &::before {
         content: "";
         background-image: linear-gradient($light, $dark);
@@ -2612,9 +2617,6 @@ header {
         width: 100%;
         position: absolute;
       }
-    }
-    &.header4 {
-      // background-image: url("../../../assets/images/hedaer-images/h3-bg.jpg");
     }
     &.gym-header {
       background-image: url("/assets/images/gym/header.jpg");
@@ -4987,6 +4989,7 @@ resume-theme css end
   }
   .gradient-text {
     background: -webkit-linear-gradient($light, $dark);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 600;
@@ -5197,6 +5200,7 @@ wedding-theme css end
   }
   .gradient-text {
     background: -webkit-linear-gradient($light, $dark);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -6684,6 +6688,7 @@ contact css end
   .scrollbar {
     overflow-y: scroll;
     &::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 6px $lighten-white2;
       -webkit-box-shadow: inset 0 0 6px $lighten-white2;
       border-radius: 10px;
       background-color: $lighten-white2;
@@ -8588,6 +8593,7 @@ wedding css start
             display: table;
             margin: 0 auto;
             background: -webkit-linear-gradient(#ecc878, #bf862d);
+            background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             font-weight: 600;
@@ -9615,8 +9621,6 @@ popup css start
       }
     }
     &:hover {
-      img {
-      }
       .overlay {
         transition: 0.6s;
         background-image: linear-gradient($light, $dark);
