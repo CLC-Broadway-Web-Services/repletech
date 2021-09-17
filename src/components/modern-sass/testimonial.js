@@ -48,7 +48,7 @@ const Testimonial = () => {
                                 <Modal isOpen={modal} toggle={toggle} centered={true} size="lg">
                                     <ModalHeader toggle={toggle} className="modal-no-header close-up"></ModalHeader>
                                     <ModalBody className="iframe-modal">
-                                        <iframe className="mfp-iframe" frameborder="0" allowfullscreen="" src="//www.youtube.com/embed/dNIfsv1rKJo?autoplay=1"></iframe>
+                                        <iframe className="mfp-iframe" title="Youtube Video" frameborder="0" allowfullscreen="" src="//www.youtube.com/embed/dNIfsv1rKJo?autoplay=1"></iframe>
                                     </ModalBody>
                                 </Modal>
                             </div>

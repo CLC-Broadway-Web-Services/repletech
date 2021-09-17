@@ -16,7 +16,7 @@ import Copyright from '../components/modern-sass/copyright';
 
 const LayoutPage = () => {
   return (
-    <>
+    <div>
       {/* <Header className="saas1" /> */}
   
       <BannerSection />
@@ -40,7 +40,7 @@ const LayoutPage = () => {
       <FooterSection />
 
       <Copyright />
-    </>
+    </div>
   );
 };
 

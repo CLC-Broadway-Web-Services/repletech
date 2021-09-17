@@ -2,13 +2,13 @@ import React, { Fragment, useEffect } from 'react'
 
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import 'bootstrap-scss';
-import '../src/assets/scss/flaticon.scss';
-import '../src/assets/scss/font-awesome.scss';
-import "../src/assets/scss/color-1.scss"
-import '../src/assets/scss/themify.scss';
-import "../src/assets/scss/slick.scss";
-import "../src/assets/scss/slick-theme.scss";
-// import "./App.scss";
+// import '../src/assets/scss/flaticon.scss';
+// import '../src/assets/scss/font-awesome.scss';
+// import "../src/assets/scss/color-1.scss"
+// import '../src/assets/scss/themify.scss';
+// import "../src/assets/scss/slick.scss";
+// import "../src/assets/scss/slick-theme.scss";
+import "./App.scss";
 import Header from "./components/common/Header";
 import LayoutPage from "./screens/LayoutPage";
 

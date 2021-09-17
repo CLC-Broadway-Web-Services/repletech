@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {Container,Row,Col} from 'reactstrap'
 const Footer = () => (
     <footer className="saas1 footer2">
@@ -18,13 +19,13 @@ const Footer = () => (
                             </div>
                             <ul className="d-d-flex footer-social social">
                                 <li className="footer-social-list">
-                                    <a href="#"><i aria-hidden="true" className="fa fa-facebook"></i></a>
+                                    <Link to="#"><i aria-hidden="true" className="fa fa-facebook"></i></Link>
                                 </li>
                                 <li className="footer-social-list">
-                                    <a href="#"><i aria-hidden="true" className="fa fa-twitter"></i></a>
+                                    <Link to="#"><i aria-hidden="true" className="fa fa-twitter"></i></Link>
                                 </li>
                                 <li className="footer-social-list">
-                                    <a href="#"><i aria-hidden="true" className="fa fa-google"></i></a>
+                                    <Link to="#"><i aria-hidden="true" className="fa fa-google"></i></Link>
                                 </li>
                             </ul>
                         </div>
@@ -38,10 +39,10 @@ const Footer = () => (
                         <h5 className="footer-headings">services</h5>
                         <div>
                             <ul className="footer-lists">
-                                <li><a href="#">Portfolio Website</a></li>
-                                <li><a href="#">Set up an account</a></li>
-                                <li><a href="#">Invoice Creation</a></li>
-                                <li><a href="#">Get Our Specials</a></li>
+                                <li><Link to="#">Portfolio Website</Link></li>
+                                <li><Link to="#">Set up an account</Link></li>
+                                <li><Link to="#">Invoice Creation</Link></li>
+                                <li><Link to="#">Get Our Specials</Link></li>
                             </ul>
                         </div>
                     </div>
@@ -54,10 +55,10 @@ const Footer = () => (
                         <h5 className="footer-headings">brand</h5>
                         <div>
                             <ul className="footer-lists">
-                                <li><a href="#">Chat24</a></li>
-                                <li><a href="#">Zoom</a></li>
-                                <li><a href="#">Alpha Payment</a></li>
-                                <li><a href="#">Upwork</a></li>
+                                <li><Link to="#">Chat24</Link></li>
+                                <li><Link to="#">Zoom</Link></li>
+                                <li><Link to="#">Alpha Payment</Link></li>
+                                <li><Link to="#">Upwork</Link></li>
                             </ul>
                         </div>
                     </div>
@@ -70,10 +71,10 @@ const Footer = () => (
                         <h5 className="footer-headings">Support</h5>
                         <div>
                             <ul className="footer-lists">
-                                <li><a href="#">For Freelancers</a></li>
-                                <li><a href="#">For Companies</a></li>
-                                <li><a href="#">For Business</a></li>
-                                <li><a href="#">General Help</a></li>
+                                <li><Link to="#">For Freelancers</Link></li>
+                                <li><Link to="#">For Companies</Link></li>
+                                <li><Link to="#">For Business</Link></li>
+                                <li><Link to="#">General Help</Link></li>
                             </ul>
                         </div>
                     </div>

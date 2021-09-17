@@ -4221,6 +4221,7 @@ booking section end
   }
   .gradient-text {
     background: -webkit-linear-gradient($red3, $red3);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }

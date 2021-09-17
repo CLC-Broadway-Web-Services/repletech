@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
 import { MENUITEMS } from './menu';
-import {Container,Row} from 'reactstrap'
+import { Container, Row } from 'reactstrap'
 const Nav = () => {
     const [mainmenu, setMainMenu] = useState(MENUITEMS);
     const [sidebar, setSidebar] = useState(false);
@@ -24,8 +24,11 @@ const Nav = () => {
                 subItems.children.filter(subSubItems => {
                     if (subSubItems.path === currentUrl)
                         setNavActive(subSubItems)
+                        return true
                 })
+                return true
             })
+            return true
         })
 
     }, [])
@@ -42,8 +45,10 @@ const Nav = () => {
                         menuItem.active = true
                         submenuItems.active = true
                     }
+                    return true
                 })
             }
+            return true
         })
         item.active = !item.active
         setMainMenu({ mainmenu: MENUITEMS })
@@ -87,7 +92,7 @@ const Nav = () => {
                     MENUITEMS.slice(0, 3).map((menuItem, i) => {
                         return (
                             <li key={i} className={` ${menuItem.megaMenu ? 'mega-menu' : ''}`}>
-                                
+
                                 {(menuItem.sidebartitle) ?
                                     <div className="dropdown">{menuItem.sidebartitle}</div>
                                     : ''}
@@ -124,7 +129,7 @@ const Nav = () => {
                                                                         <a className="menu-head">{megaMenuItem.title}</a>
                                                                         <ul className={`menu-icon ${megaMenuItem.title ? 'openSubChildMenu' : ''}`}>
                                                                             {menuItem.title === 'Elements' ?
-                                                                               
+
                                                                                 (megaMenuItem.children).map((subMegaMenuItem, i) => {
                                                                                     return (
                                                                                         <li key={i}>
@@ -167,7 +172,7 @@ const Nav = () => {
                                                     : ''}
                                                 {(childrenItem.type === 'link') ?
                                                     <Link to={`${childrenItem.path}`}>
-                                                        <a>    {childrenItem.title} </a>
+                                                        {childrenItem.title}
                                                     </Link>
                                                     : ''}
                                                 {childrenItem.children ?
@@ -175,8 +180,8 @@ const Nav = () => {
                                                         {childrenItem.children.map((childrenSubItem, key) =>
                                                             <li key={key}>
                                                                 {(childrenSubItem.type === 'link') ?
-                                                                    <Link to={`${childrenSubItem.path}`} >
-                                                                        <a className="sub-menu-title">{childrenSubItem.title}</a>
+                                                                    <Link to={`${childrenSubItem.path}`} className="sub-menu-title" >
+                                                                        {childrenSubItem.title}
                                                                     </Link>
                                                                     : ''}
                                                             </li>
@@ -197,7 +202,7 @@ const Nav = () => {
                     MENUITEMS.slice(3, 7).map((menuItem, i) => {
                         return (
                             <li key={i} className={` ${menuItem.megaMenu ? 'mega-menu' : ''}`}>
-                              
+
                                 {(menuItem.sidebartitle) ?
                                     <div className="dropdown">{menuItem.sidebartitle}</div>
                                     : ''}
@@ -220,7 +225,7 @@ const Nav = () => {
                                     : ''}
 
                                 {/* MEGHA MENU */}
-                                <div className={`mega-menu-container ${menuItem.title === 'Elements' ? 'resize' : ''} ${ menuItem.active ? 'opensubmenu activeSubmenu' : '' }`}>
+                                <div className={`mega-menu-container ${menuItem.title === 'Elements' ? 'resize' : ''} ${menuItem.active ? 'opensubmenu activeSubmenu' : ''}`}>
                                     {
                                         menuItem.megaMenu === true
                                             ?
@@ -234,7 +239,7 @@ const Nav = () => {
                                                                         <a className="menu-head">{megaMenuItem.title}</a>
                                                                         <ul className={`menu-icon ${megaMenuItem.title ? 'openSubChildMenu' : ''}`}>
                                                                             {menuItem.title === 'Elements' ?
-                                                                                
+
                                                                                 (megaMenuItem.children).map((subMegaMenuItem, i) => {
                                                                                     return (
                                                                                         <li key={i}>
@@ -277,7 +282,7 @@ const Nav = () => {
                                                     : ''}
                                                 {(childrenItem.type === 'link') ?
                                                     <Link to={`${childrenItem.path}`}>
-                                                        <a>    {childrenItem.title} </a>
+                                                        {childrenItem.title}
                                                     </Link>
                                                     : ''}
                                                 {childrenItem.children ?
@@ -285,8 +290,8 @@ const Nav = () => {
                                                         {childrenItem.children.map((childrenSubItem, key) =>
                                                             <li key={key}>
                                                                 {(childrenSubItem.type === 'link') ?
-                                                                    <Link to={`${childrenSubItem.path}`} >
-                                                                        <a className="sub-menu-title">{childrenSubItem.title}</a>
+                                                                    <Link to={`${childrenSubItem.path}`} className="sub-menu-title">
+                                                                        {childrenSubItem.title}
                                                                     </Link>
                                                                     : ''}
                                                             </li>

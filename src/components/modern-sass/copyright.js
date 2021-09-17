@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Container, Row, Col } from 'reactstrap'
 const Copyright = () => (
     <div className="saas1 copyright">
@@ -8,10 +9,10 @@ const Copyright = () => (
                     <div className="link-horizontal center-text">
                         <ul>
                             <li>
-                                <a className="copyright-text op-text" href="#">Privacy Policy</a>
+                                <Link className="copyright-text op-text" to="#">Privacy Policy</Link>
                             </li>
                             <li>
-                                <a className="copyright-text op-text" href="#">Terms &amp; Conditions</a>
+                                <Link className="copyright-text op-text" to="#">Terms &amp; Conditions</Link>
                             </li>
                         </ul>
                     </div>

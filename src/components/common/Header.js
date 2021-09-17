@@ -19,7 +19,7 @@ const Header = props => {
                 <Row>
                     <Col>
                         <nav>
-                            <a className="m-r-auto" href="/">
+                            <Link className="m-r-auto" to="/">
                                 {props.className === 'agency' ?
                                     <img alt="" className="img-fluid" src="/assets/images/logo/9.png" />
                                     :
@@ -40,9 +40,9 @@ const Header = props => {
 
                                                         : <img alt="" className="img-fluid" src="/assets/images/logo/1.png" />
                                 }
-                            </a>
+                            </Link>
                             <div className="responsive-btn">
-                                <a className="toggle-nav" onClick={clickSidebar} >
+                                <a className="toggle-nav" href="#" onClick={clickSidebar} >
                                     <i aria-hidden="true" className="fa fa-bars text-white"></i>
                                 </a>
                             </div>
@@ -51,9 +51,9 @@ const Header = props => {
                                 <div className="top-header-right">
                                     <ul>
                                         <li className="search" >
-                                            <a href="#" onClick={() => setSearch(!search)}>
+                                            <Link to="#" onClick={() => setSearch(!search)}>
                                                 <i className="icon-search"></i>
-                                            </a>
+                                            </Link>
                                             <div aria-labelledby="dropdownMenuButton" className={`dropdown-menu ${search && `show`} dropdown-menu-right`}>
                                                 <form className="form-inline search-form">
                                                     <div className="form-group">
@@ -67,14 +67,13 @@ const Header = props => {
                                         </li>
 
                                         <li className="account ">
-                                            <a href="#" onClick={() => setShow(!show)}>
+                                            <Link to="#" onClick={() => setShow(!show)}>
                                                 <i className="icon-user"></i>
-                                            </a>
+                                            </Link>
                                             <div className={`dropdown-menu ${show && `show`} dropdown-menu-right`}>
-                                                <Link href={"/shop/auth/login"}><a href="#">Login</a></Link>
-                                                <a href="#">Account</a>
-                                                <Link href={"/shop/wishlist"}><a href="#">Wishlist</a></Link>
-                                                <Link href={"/shop/checkout"}><a href="#">checkout</a></Link>
+                                                <Link to={"/shop/auth/login"}>Login</Link>
+                                                <Link to={"/shop/wishlist"}>Wishlist</Link>
+                                                <Link to={"/shop/checkout"}>checkout</Link>
                                             </div>
                                         </li>
                                     </ul>

@@ -31,7 +31,7 @@ const Work = () => {
                                 NavData.map((item, i) => {
                                     return (
                                         <li className={`nav-item  text-center ${item.title === nav ? 'active' : ''} `} key={i}>
-                                            <a aria-selected="true" className={`nav-link ${'work' == item.title ? 'active show' : ''}`} data-toggle="pill"
+                                            <a aria-selected="true" className={`nav-link ${'work' === item.title ? 'active show' : ''}`} data-toggle="pill"
                                                 onClick={() => toggle(item.title)}
                                                 role="tab">
                                                 <img alt="tab-image-1" src={item.img} />
