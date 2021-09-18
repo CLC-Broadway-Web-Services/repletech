@@ -6,8 +6,7 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^12.1.0",
     "@testing-library/user-event": "^13.2.1",
-    "bootstrap": "^5.1.1",
-    "bootstrap-scss": "^5.1.1",
+    "bootstrap-scss": "^4.4.1",
     "nprogress": "^0.2.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -44,5 +43,16 @@
   },
   "engines": {
     "node": "14.17.6"
+  },
+  "cssnano": {
+    "preset": [
+      "default",
+      {
+        "calc": false
+      }
+    ]
+  },
+  "resolutions": {
+    "react-scripts/postcss-preset-env/postcss-custom-properties": "^10.0.0"
   }
 }
